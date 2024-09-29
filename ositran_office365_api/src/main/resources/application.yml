@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ositran_office365_api
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/ORCLCDB
+    username: OSITRANDB
+    password: 123456
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+
+#swagger
+springdoc:
+  api-docs:
+    enabled: true
+  paths-to-match: /api/**
+  swagger-ui:
+    path: /docs
+    enabled: true
+

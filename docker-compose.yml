@@ -1,0 +1,16 @@
+version: '3'
+services:
+  database:
+    image: doctorkirk/oracle-19c
+    container_name: oracle-service
+    environment:
+      - ORACLE_PWD=123456
+      - ORACLE_SID=ORCLCDB
+    ports:
+      - '1521:1521'
+    volumes:
+      - ./dataOracle/:/opt/oracle/oradata
+    deploy:
+        resources:
+            limits:
+              memory: 3g
